@@ -242,6 +242,7 @@ module Vultr
       faraday.response :json, :content_type => 'application/json'
       faraday.response :follow_redirects
       faraday.adapter Faraday.default_adapter
+      faraday.proxy ENV["QUOTAGUARDSTATIC_URL"]
     end
   end
 end
